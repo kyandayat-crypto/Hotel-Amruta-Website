@@ -1,7 +1,7 @@
 
 import "./App.css";
 
-const phone = "919096820758";
+const phone = "+918625868604"; // Replace with your WhatsApp number
 
 const whatsapp = (message: string) =>
   `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -14,7 +14,7 @@ const services = [
   message: "Hello Hotel Amruta, I want to book a Birthday Party.",
 },
   {
-    title: "Anniversary Party",
+    title: "Anniversary Party", 
     image: "/images/anniversary.jpg",
     description: "Make your anniversary celebration unforgettable.",
     message: "Hello Hotel Amruta, I want to enquire about Anniversary Party.",
@@ -67,7 +67,7 @@ function App() {
     <a href="#contact">Contact</a>
   </nav>
 
-  <a className="header-btn" href="tel:+919096820758">
+  <a className="header-btn" href={`tel:${phone}`}>
     <span>☎</span> Call Now
   </a>
 </header>
@@ -312,8 +312,8 @@ function App() {
             WhatsApp Booking
           </a>
 
-          <a href="tel:+919096820758" className="secondary-dark-btn">
-            Call: 9096820758
+          <a href={`tel:${phone}`} className="secondary-dark-btn">
+            Call: {phone}
           </a>
         </div>
       </section>
@@ -328,11 +328,11 @@ function App() {
         <div className="gallery-grid">
           {[
             ["hotel photo 1.jpeg", "Hotel"],
-            ["restaurant.jpg", "Restaurant"],
-            ["garden.jpg", "Garden"],
-            ["banquet.jpg", "Banquet Hall"],
-            ["birthday.jpg", "Birthday Party"],
-            ["room.jpg", "Hotel Rooms"],
+            ["hotel img Gallery 2 (2).jpeg", "Hotel Gallery"],
+            ["hotel img Gallery 3.jpeg", "Hotel View"],
+            ["hotel img Gallery 4.jpeg", "Hotel Gallery"],
+            ["WhatsApp Image 2026-08-11 at 4.06.55 PM (1).jpeg", "Hotel Moments"],
+            ["WhatsApp Image 2026-08-11 at 4.06.56 PM.jpeg", "Hotel Memories"],
           ].map(([image, name]) => (
             <div className="gallery-item" key={image}>
               <img src={`/images/${image}`} alt={name} />
@@ -363,8 +363,10 @@ function App() {
           <div className="contact-card">
             <span>📞</span>
             <h3>Call Us</h3>
-            <a href="tel:+919096820758">+91 9096820758</a>
+            <a href={`tel:${phone}`}>{phone}</a>
           </div>
+
+          
 
           <div className="contact-card">
             <span>💬</span>
@@ -378,6 +380,56 @@ function App() {
             </a>
           </div>
         </div>
+        <div className="social-section">
+    <h3>Connect With Us</h3>
+    <p>Follow Hotel Amruta on social media</p>
+
+    <div className="social-links"></div>
+          <a
+        href="https://www.instagram.com/hotel_amruta?avpt=MWNmY3BmemExcjkx"
+        target="_blank"
+        rel="noreferrer"
+        className="social-link instagram"
+        aria-label="Instagram"
+      >
+            <img
+          src="https://cdn.simpleicons.org/instagram/E4405F"
+          alt="Instagram"
+        />
+        <span>Instagram</span>
+        </a>
+
+        <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="social-link facebook"
+        aria-label="Facebook"
+      >
+        <img
+          src="https://cdn.simpleicons.org/facebook/0866FF"
+          alt="Facebook"
+        />
+        <span>Facebook</span>
+      </a>
+
+      <a
+        href="https://youtube.com/@hotelamruta-k5i?si=K3SY5m5w-VIdmOgW"
+        target="_blank"
+        rel="noreferrer"
+        className="social-link youtube"
+        aria-label="YouTube"
+      >
+        <img
+          src="https://cdn.simpleicons.org/youtube/FF0000"
+          alt="YouTube"
+        />
+        <span>YouTube</span>
+      </a>
+    </div>  
+
+
+        
 
         <div className="map-container">
           <iframe
@@ -394,6 +446,10 @@ function App() {
         <h2>HOTEL AMRUTA PURE VEG</h2>
         <p>Good Food • Great Celebrations • Comfortable Stay</p>
         <p>© 2026 Hotel Amruta. All Rights Reserved.</p>
+        <p>   </p>
+        <p>Designed by krushna yandayat <a href="tel:+919096820758">
+              9096820758
+            </a></p> 
       </footer>
 
       {/* Floating WhatsApp */}
